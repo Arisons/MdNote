@@ -139,6 +139,8 @@ artTemplate JS模板引擎 嵌套循环详解
                   $("#main").html(html);
             });
         </script>	
+
+经测试发现可以再模板中使用php代码，不会与模板发生冲突
 	
 ***	
 待完善
