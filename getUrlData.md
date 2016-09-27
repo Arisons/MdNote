@@ -22,3 +22,5 @@
                 }
             }
 >它里面用的是unescape，通过测试其对中文不能解码。而且已经在ECMAscript v3中被废除。推荐大家使用 decodeURI()取代unescape()；详情参考[点击查看](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape "MDN")；
+
+测试Demo[点击查看](https://smileyby.github.io/url_test/ "url_test")；
