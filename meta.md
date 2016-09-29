@@ -71,4 +71,67 @@ meta标签的组成：meta标签共有两个属性，他们分别是http-equiv�
 *	用法：
 	
 	<meta http-equiv="Set-Cookie" content="cookievalue=xxx;expires=Friday,12-Jan-200118:18:18GMT;path=/">
->Window
+>#####Window-target（显示窗口设定）#####
+*   说明：轻质页面在当前窗口以独立页面显示。
+*   注意：这个属性是用来防止别人在框架里面调用你的页面。
+*   Content选项：_blank _top _self _parent
+*   用法：
+
+
+    <meta http-equiv="Window-target" Content="_top">
+>#####Pics-label（网页RSAC等级评定）#####
+*   说明：在IE的Internet选项有意向内容设置，可以防止浏览器一些限制的网站，而网站的限制级别就是通过该参数来设置的。
+*   注意：不要将级别设置的太高。RSAC的评估系统提供了一种用来评价Web站点内容的标准。用户可以设置Microsoft Internet Explorer（IE3.0以上）来排除包含有色情和暴力内容的站点。上面这个例子中的HTML取自Microsoft的主页。代码中的（n 0 s 0 v 0 l 0）表示该站点不包含不健康内容。级别的评定是由RSAC，即美国娱乐委员会的评级机构评定的，如果你想进一步了解RSAC评估系统的等级内容，或者你需要评价自己的网站，可以访问RSAC的站点：http://www.rsac.org/.
+*   用法：
+
+    <META http-equiv="Pics-label" Contect="(PICS－1.1'http://www.rsac.org/ratingsv01.html'I gen comment 'RSACi North America Sever' by 'inet@microsoft.com'for 'http://www.microsoft.com' on '1997.06.30T14:21－0500' r(n0 s0 v0 l0))">
+
+>#####Page-Enter、Page-Exit (进入与退出)#####
+*   说明：这个是页面被载入和调出时的一些特效。
+*   注意：blendTrans是动态滤镜的一种，产生渐隐效果。另一种动态滤镜RevealTrans也可以用于页面进入与退出效果:
+*   用法：
+
+
+    <Meta http-equiv="Page-Enter" Content="blendTrans(Duration=0.5)">
+    <Meta http-equiv="Page-Exit" Content="blendTrans(Duration=0.5)">
+    <Meta http-equiv="Page-Enter" Content="revealTrans(duration=x, transition=y)">
+    <Meta http-equiv="Page-Exit" Content="revealTrans(duration=x, transition=y)">
+    //Duration　　表示滤镜特效的持续时间(单位：秒)
+    //Transition　滤镜类型。表示使用哪种特效，取值为0-23。
+    //0 矩形缩小
+    //1 矩形扩大
+    //2 圆形缩小
+    //3 圆形扩大
+    //4 下到上刷新
+    //5 上到下刷新
+    //6 左到右刷新
+    //7 右到左刷新
+    //8 竖百叶窗
+    //9 横百叶窗
+    //10 错位横百叶窗
+    //11 错位竖百叶窗
+    //12 点扩散
+    //13 左右到中间刷新
+    //14 中间到左右刷新
+    //15 中间到上下
+    //16 上下到中间
+    //17 右下到左上
+    //18 右上到左下
+    //19 左上到右下
+    //20 左下到右上
+    //21 横条
+    //22 竖条
+    //23 以上22种随机选择一种
+>#####MSThemeCompatible (XP主题)#####
+*   说明：是否在IE中关闭 xp 的主题
+*   注意：关闭 xp 的蓝色立体按钮系统显示样式，从而和win2k 很象。
+*   用法：
+
+
+    <Meta http-equiv="MSThemeCompatible" Content="Yes">
+>#####Content-Script-Type (脚本相关)#####
+*   说明：这是近来W3C的规范，指明页面中脚本的类型。
+*   用法：
+
+
+    <Meta http-equiv="Content-Script-Type" Content="text/javascript">
